@@ -22,8 +22,8 @@ class KanyeQuotes extends Component
     public function fetchQuotes()
     {
         $this->quotes = collect();
+        $client = new Client();
         for ($i=0; $i < 5; $i++) { 
-            $client = new Client();
 
             $response = $client->request('GET', 'https://api.kanye.rest/');
     
